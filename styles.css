@@ -1,0 +1,226 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+/* nav bar */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* section about */
+.about-section {
+    position: relative;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    height: 100vh; /* Ajuste la hauteur de la section selon votre besoin */
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.about-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about-content h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    margin-bottom: 0;
+}
+
+.about-content h2 {
+    margin-top: 10px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.about-content p {
+    font-family: 'Space Mono', monospace;
+    margin-top: 10px;
+}
+
+/* section cv */
+#cv img {
+    height: auto;
+    width: 40%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#cv #cv-container {
+    text-align: center;
+    text-decoration: none;
+}
+
+#cv #cv-container a {
+    padding: 10px;
+    background: #333;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* section compétences */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skill {
+    flex: 1 1 200px;
+    text-align: center;
+    margin: 25px;
+}
+
+.skill img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Java */
+.skill_java {
+    flex: 1 1 200px;
+    text-align: center;
+    margin: 25px;
+}
+
+.skill_java img {
+    width: 130px;
+}
+
+/* SQL */
+.skill_sql {
+    flex: 1 1 200px;
+    text-align: center;
+    margin: 25px;
+}
+
+.skill_sql img {
+    width: 115px;
+}
+
+/* section project */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project {
+    position: relative;
+    flex: 1 1 calc(50% - 20px); /* Deux projets par ligne avec espace */
+    margin: 10px;
+    overflow: hidden;
+}
+
+.project .projectImg-container {
+    display: flex;
+    justify-content: center;
+}
+
+.project .projectImg-container img {
+    align-items: center;
+    width: auto;
+    max-height: 217px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.project img {
+    width: 100%;
+    max-height: 217px;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+}
+
+.project-description {
+    display: none;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+.project:hover .project-description {
+    display: block;
+}
+
+/* section contact */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px; /* Ajoute de la marge en bas pour éviter que le footer cache les contacts */
+}
+
+.contact-links a {
+    margin: 0 20px; /* Augmente l'espacement horizontal entre les icônes */
+    background: #333; /* Ajoute un fond sombre pour rendre les icônes blanches visibles */
+    border: 2px solid #333;
+    border-radius: 50%;
+    padding: 20px; /* Augmente la taille du padding */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-links img {
+    width: 30px;
+    height: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background: #333;
+    color: #fff;
+    position: relative; /* Modifié de fixed à relative */
+    width: 100%;
+}
