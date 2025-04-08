@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan SEBELON - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <section id="home">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#competences">Compétences</a></li>
+            </ul>
+        </nav>
+        <div class="text-container">
+            Nathan Sebelon
+        </div>
+        <div class="gradient-bg">
+            <svg xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                        <feBlend in="SourceGraphic" in2="goo" />
+                    </filter>
+                </defs>
+            </svg>
+            <div class="gradients-container">
+                <div class="g1"></div>
+                <div class="g2"></div>
+                <div class="g3"></div>
+                <div class="g4"></div>
+                <div class="g5"></div>
+                <div class="interactive"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about container">
+        <h2>À propos de moi</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Bienvenue sur mon portfolio de deuxième année de BUT Informatique. Vous trouverez ici les différentes compétences que j'ai développées au cours de cette année, ainsi que les projets sur lesquels j'ai travaillé.</p>
+                <p>Cliquez sur une compétence pour en savoir plus sur mon parcours et mes réalisations dans ce domaine.</p>
+                <a href="asset/CV.pdf" download class="cv-download-btn">
+                    <i class="fas fa-download"></i> Télécharger mon CV
+                </a>
+            </div>
+            <div class="about-image">
+                <img src="asset/PhotoRond.JPG" alt="Ma photo" class="profile-photo">
+            </div>
+        </div>
+    </section>
+
+    <section id="parcours" class="parcours">
+        <div class="container">
+            <h2>Mon Parcours</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2022 - Aujourd'hui</span>
+                        <h3>BUT Informatique</h3>
+                        <p>Actuellement en 2ème année de BUT Informatique, je développe mes compétences en programmation, conception de systèmes d'information et gestion de projets informatiques.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="timeline-date">2019 - 2022</span>
+                        <h3>BAC STI2D SIN</h3>
+                        <p>Diplômé avec mention Assez Bien du Baccalauréat Sciences et Technologies de l'Industrie et du Développement Durable, spécialité Systèmes d'Information et Numérique au Lycée Général et Technologique de Crépy-en-Valois.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences" class="competences container">
+        <h2>Mes compétences</h2>
+        <div class="competence-grid">
+            <div class="competence-card" onclick="location.href='competences/competences.html#realiser-content'">
+                <div class="competence-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Réaliser</h3>
+                <p>Partir des exigences et aller jusqu'à une application complète.</p>
+            </div>
+
+            <div class="competence-card" onclick="location.href='competences/competences.html#optimiser-content'">
+                <div class="competence-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Optimiser</h3>
+                <p>Sélectionner les algorithmes adéquats pour répondre à un problème donné.</p>
+            </div>
+
+            <div class="competence-card" onclick="location.href='competences/competences.html#administrer-content'">
+                <div class="competence-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Administrer</h3>
+                <p>Déployer des services dans une architecture réseau.</p>
+            </div>
+
+            <div class="competence-card" onclick="location.href='competences/competences.html#gerer-content'">
+                <div class="competence-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>Gérer</h3>
+                <p>Optimiser une base de données, interagir avec une application et mettre en œuvre la sécurité.</p>
+            </div>
+
+            <div class="competence-card" onclick="location.href='competences/competences.html#conduire-content'">
+                <div class="competence-icon">
+                    <i class="fas fa-tasks"></i>
+                </div>
+                <h3>Conduire</h3>
+                <p>Appliquer une démarche de suivi de projet en fonction des besoins métiers des clients et des utilisateurs.</p>
+            </div>
+
+            <div class="competence-card" onclick="location.href='competences/competences.html#collaborer-content'">
+                <div class="competence-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Collaborer</h3>
+                <p>Situer son rôle et ses missions au sein d'une équipe informatique.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>Nathan Sebelon</h3>
+                <p>Étudiant en BUT Informatique</p>
+                <p>Portfolio professionnel - 2025</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.linkedin.com/in/nathan-sebelon" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Nathan-sbl?tab=repositories" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:nathan.sebelon@gmail.com" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Nathan Sebelon – Portfolio réalisé dans le cadre du BUT Informatique</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="navbar.js"></script>
+</body>
+</html>

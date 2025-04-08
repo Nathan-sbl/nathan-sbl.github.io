@@ -1,0 +1,380 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Barre de navigation des compétences */
+.competences-nav {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.competence-tab {
+    flex: 1;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    text-decoration: none;
+    /* transition: all 0.3s ease; */
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.tab-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+    padding: 10px 0;
+}
+
+.tab-content {
+    max-height: 0;
+    overflow: hidden;
+    /* transition: max-height 0.3s ease; */
+    padding: 0 15px;
+}
+
+/* Couleurs pour chaque compétence */
+.realiser {
+    background-color: #c11212; /* Rouge */
+}
+
+.optimiser {
+    background-color: #e67e22; /* Orange */
+}
+
+.administrer {
+    background-color: #f1c40f; /* Jaune */
+}
+
+.gerer {
+    background-color: #7ac142; /* Vert */
+}
+
+.conduire {
+    background-color: #0a2463; /* Bleu foncé */
+}
+
+.collaborer {
+    background-color: #1a1a1a; /* Noir */
+}
+
+/* État actif */
+.competence-tab.active .tab-content {
+    max-height: 100px;
+    padding: 10px 15px 20px;
+    overflow: visible;
+}
+
+/* Effet hover */
+.competence-tab:hover {
+    opacity: 0.9;
+}
+
+/* Contenu des compétences */
+.competence-content {
+    display: none;
+    padding: 40px 0;
+}
+
+.competence-content.active {
+    display: block;
+}
+
+.competence-header {
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Headers spécifiques pour chaque compétence */
+#realiser-content .competence-header {
+    background: linear-gradient(135deg, #c11212 0%, #ff5252 100%);
+}
+
+#optimiser-content .competence-header {
+    background: linear-gradient(135deg, #e67e22 0%, #f39c12 100%);
+}
+
+#administrer-content .competence-header {
+    background: linear-gradient(135deg, #f1c40f 0%, #f4d03f 100%);
+}
+
+#gerer-content .competence-header {
+    background: linear-gradient(135deg, #7ac142 0%, #8bc34a 100%);
+}
+
+#conduire-content .competence-header {
+    background: linear-gradient(135deg, #0a2463 0%, #1a3a7f 100%);
+}
+
+#collaborer-content .competence-header {
+    background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+}
+
+.competence-description {
+    margin-bottom: 40px;
+}
+
+.projects-section {
+    margin-top: 60px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #2575fc;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #1a5cb8;
+}
+
+/* Base styles that might be needed */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Footer styles for competence pages */
+.footer {
+    position: relative;
+    background: #3a3a3a;
+    color: white;
+    padding: 80px 0 20px;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.footer-waves {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 60px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23ffffff"/></svg>');
+    background-size: 1200px 100%;
+    animation: wave-animation 25s linear infinite;
+    z-index: 1;
+}
+
+#wave1 {
+    animation-delay: 0s;
+    animation-duration: 20s;
+    opacity: 0.1;
+}
+
+#wave2 {
+    animation-delay: -5s;
+    animation-duration: 15s;
+    opacity: 0.2;
+}
+
+#wave3 {
+    animation-delay: -2s;
+    animation-duration: 10s;
+    opacity: 0.3;
+}
+
+#wave4 {
+    animation-delay: -7s;
+    animation-duration: 12s;
+    opacity: 0.4;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-info {
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 20px;
+}
+
+.footer-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.footer-info p {
+    color: #ddd;
+    margin-bottom: 5px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-social {
+        margin-top: 20px;
+        justify-content: center;
+    }
+}
+
+/* Additional styles for competence pages */
+.competence-description h2,
+.projects-section h2 {
+    color: #2575fc;
+    margin-bottom: 20px;
+}
+
+.competence-description h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.competence-description ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.competence-description li {
+    margin-bottom: 8px;
+}
+
+/* Responsive design for competence pages */
+@media (max-width: 768px) {
+    .competences-nav {
+        flex-direction: column;
+    }
+    
+    .competence-tab {
+        padding: 10px 0;
+    }
+    
+    .competence-header {
+        padding: 40px 0;
+    }
+}
+
+/* Home button styles */
+.home-button-container {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f8f9fa;
+}
+
+.home-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #2575fc;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.home-button:hover {
+    background-color: #1a5cb8;
+    transform: scale(1.1);
+}
+
+.home-button i {
+    margin: 0;
+    font-size: 1.2rem;
+}
